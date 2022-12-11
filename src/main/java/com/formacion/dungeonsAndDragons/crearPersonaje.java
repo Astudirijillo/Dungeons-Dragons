@@ -1,5 +1,7 @@
 package com.formacion.dungeonsAndDragons;
 
+import com.formacion.dungeonsAndDragons.*;
+
 public class crearPersonaje {
 
 	public static void main(String[] args) {

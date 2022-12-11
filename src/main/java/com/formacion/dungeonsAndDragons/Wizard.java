@@ -9,7 +9,7 @@ public class Wizard extends Human {
 	}
 
 	public Human heal(Human p1) {
-		if(p1.health < 100 || p1.health > 92) {
+		if (p1.health < 100 || p1.health > 92) {
 			p1.setHealth(p1.getHealth() + this.intelligence);
 		} else {
 			p1.setHealth(100);
@@ -18,9 +18,10 @@ public class Wizard extends Human {
 	}
 
 	public Human fireball(Human p1) {
-		p1.setHealth(p1.getHealth() - (this.intelligence * 3));
-		if(p1.getHealth() <= 0) {
-			p1.setHealth(health);
+		if (p1.getHealth() <= (this.intelligence * 3)) {
+			p1.setHealth(0);
+		} else {
+			p1.setHealth(p1.getHealth() - (this.intelligence * 3));
 		}
 		return p1;
 	}

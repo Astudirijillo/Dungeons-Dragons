@@ -40,7 +40,11 @@ public class Human {
 	}
 
 	public int atacar(int enemyHealth) {
-		return enemyHealth = strength - enemyHealth;
+		if (enemyHealth < 0) {
+			return enemyHealth = 0;
+		} else {
+			return enemyHealth -= strength;
+		}
 	}
 
 	public Human() {
